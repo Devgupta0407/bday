@@ -1357,9 +1357,9 @@
         }
 
         function checkChallenge1() {
-            const input = document.getElementById('challenge1Input').value.trim().toLowerCase();
+            const input = document.getElementById('challenge1Input').value.trim().toUpperCase();
             // Accept various terms of endearment
-            const valid = ['promise'];
+            const valid = ['PROMISE'];
             
             if (valid.some(v => input.includes(v))) {
                 document.getElementById('challenge1Success').style.display = 'block';
@@ -1415,12 +1415,10 @@
         }
 
         function checkChallenge5() {
-            const input = document.getElementById('challenge5Input').value.trim().toLowerCase();
+            const input = document.getElementById('challenge5Input').value.trim().toUpperCase();
             // Accept meaningful words
 
-            const valid = ['us'];
-
-            if (valid.some(v => input.includes (v)) || input.length > 3 {
+            if (input === 'US') {
                 document.getElementById('challenge5Success').style.display = 'block';
                 setTimeout(() => goToPage(13), 1500);
             } else {
@@ -1472,4 +1470,5 @@
 </body>
 
 </html>
+
 
