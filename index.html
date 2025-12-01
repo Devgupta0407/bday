@@ -1417,8 +1417,10 @@
         function checkChallenge5() {
             const input = document.getElementById('challenge5Input').value.trim().toLowerCase();
             // Accept meaningful words
-            
-            if (input === 'US') {
+
+            const valid = ['us'];
+
+            if (valid.some(v => input.includes (v)) || input.length > 3 {
                 document.getElementById('challenge5Success').style.display = 'block';
                 setTimeout(() => goToPage(13), 1500);
             } else {
@@ -1470,3 +1472,4 @@
 </body>
 
 </html>
+
